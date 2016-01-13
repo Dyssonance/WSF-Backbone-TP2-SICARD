@@ -114,8 +114,6 @@ var StudentListView = Backbone.View.extend ({
 			</li>\
 		';
 
-		console.log('test4');
-
 		//Retourner la string qui est convertie en html grâce à JQuery
 		return $(studentTemplate);
 	},
@@ -152,6 +150,5 @@ var StudentListView = Backbone.View.extend ({
 			//Retourner la template une fois qu'elle est récupérée
 			$renderTarget.append(studentTemplate);
 		}
-		console.log('Test3');
 	}
 });
