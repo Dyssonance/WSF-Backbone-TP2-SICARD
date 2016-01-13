@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kicékéla</title>
+</head>
+<style>
+	img {
+		max-width: 200px;
+	}
+	body {
+		font-family: helvetica;
+	}
+</style>
+<body>
+	<div id='app'>
+		<div class='students'>
+
+			<h1>Liste des Etudiants</h1>
+
+			<!-- Liste des étudiants ici -->
+			<ul class='student-list'></ul>
+
+			<!-- Input des carac des étudiants ici -->
+			<form action='#'>
+				<input type='text' placeholder='NOM' class='student-surname' required>
+				<input type='text' placeholder='Prénom' class='student-name' required>
+				<input type='text' placeholder='Entrer URL' class='student-pic'>
+				<input type='submit' value='Ajouter'> 
+			</form>
+
+		</div>
+
+		<!-- Statistiques de présence/absence d'étudiants ici -->
+		<div class='stats'>
+			<p>Il y a un total de <span class="student-total">0</span> étudiants.</p>
+			<p>Il y a <span class="student-here-total">0</span> étudiants présents.</p>
+			<p>Il y a <span class="student-not-here-total">0</span> étudiants absents.</p>
+		</div>
+	</div>
+
+	<!-- LIBRAIRIES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+
+	<!-- Scripts de l'app -->
+	<script src='scripts/models/student-model.js'></script>
+	<script src='scripts/collections/student-collection.js'></script>
+	<script src='scripts/views/student-list.js'></script>
+	<script src='scripts/app.js'></script>
+</body>
+</html>
